@@ -1,0 +1,2 @@
+# Même environnement en local et sur Streamlit Community Cloud.
+-r requirements-lock.txt
