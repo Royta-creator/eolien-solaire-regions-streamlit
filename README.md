@@ -3,6 +3,15 @@
 **Roy TAMWO - 20230840 - I2-DE_02**  
 Projet individuel Streamlit, EFREI, 2026
 
+## Liens du rendu
+
+- [Application Streamlit](https://roy-tamwo-eolien-solaire.streamlit.app/)
+- [Dépôt GitHub](https://github.com/Royta-creator/eolien-solaire-regions-streamlit)
+- [Rapport et storyboard](docs/Rapport_Roy_TAMWO.pdf)
+- [Présentation simple](docs/Presentation_Roy_TAMWO.pdf)
+- [Vidéo de démonstration — 2 min 40](demo/Demo_Roy_TAMWO.mp4)
+- [Sous-titres de la vidéo](demo/Demo_Roy_TAMWO.srt)
+
 ## La question
 
 Quelle place la production éolienne et solaire prend-elle dans la consommation annuelle des régions françaises entre 2013 et 2024 ? Le tableau de bord s'adresse à une personne qui souhaite comparer les territoires sans connaissances particulières sur le réseau électrique.
@@ -117,8 +126,8 @@ Les 11 tests passent dans un environnement Python 3.12.14 neuf sur Windows x64. 
 
 ## Mise en ligne et dépôt
 
-Le dossier est prêt à déposer dans un dépôt GitHub. Dans Streamlit Community Cloud, choisir ce dépôt, le fichier `app.py` et Python 3.12. Aucun secret n'est requis. `requirements.txt` charge le même verrouillage qu'en local. [Procédure officielle Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app).
+L'application est publiée sur [Streamlit Community Cloud](https://roy-tamwo-eolien-solaire.streamlit.app/) depuis la branche `main` du [dépôt GitHub](https://github.com/Royta-creator/eolien-solaire-regions-streamlit), avec `app.py` et Python 3.12. Aucun secret n'est requis. `requirements.txt` charge le même verrouillage qu'en local. PyArrow est fixé à 24.0.0, la version retenue par la plateforme lors du déploiement. [Procédure officielle Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app).
 
-La livraison locale ne contient pas d'adresse publique inventée. Le dépôt GitHub, la publication de l'application et l'hébergement éventuel de la vidéo nécessitent le compte du déposant. Après publication, joindre les liens réels à la remise sur la plateforme du cours.
+Les graphiques et le recalcul des indicateurs ont été vérifiés sur l'application publiée. Le rapport contient le storyboard ; la vidéo dure 2 min 40 et présente les interactions avec des sous-titres. Les liens complets à joindre à la remise se trouvent aussi dans `LIENS_REMISE.txt`.
 
 Nom de remise : **StApp26_20230840_TAMWO_DE2.zip**. Le suffixe DE2 correspond au groupe indiqué **I2-DE_02**.

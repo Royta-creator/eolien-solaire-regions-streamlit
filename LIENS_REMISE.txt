@@ -1,0 +1,23 @@
+PROJET INDIVIDUEL STREAMLIT — ROY TAMWO
+Numéro étudiant : 20230840
+Groupe : I2-DE_02 (DE2)
+
+Sujet : Éolien et solaire — quelle place dans la consommation des régions ?
+
+Application publiée :
+https://roy-tamwo-eolien-solaire.streamlit.app/
+
+Dépôt GitHub (code, données et documents) :
+https://github.com/Royta-creator/eolien-solaire-regions-streamlit
+
+Rapport et storyboard (storyboard en page 3) :
+https://github.com/Royta-creator/eolien-solaire-regions-streamlit/blob/main/docs/Rapport_Roy_TAMWO.pdf
+
+Présentation simple :
+https://github.com/Royta-creator/eolien-solaire-regions-streamlit/blob/main/docs/Presentation_Roy_TAMWO.pdf
+
+Vidéo de démonstration — 2 min 40, sous-titrée, sans piste audio :
+https://github.com/Royta-creator/eolien-solaire-regions-streamlit/blob/main/demo/Demo_Roy_TAMWO.mp4
+
+Nom du fichier à déposer : StApp26_20230840_TAMWO_DE2.zip
+Le ZIP contient également tous les fichiers ci-dessus pour une lecture locale.
