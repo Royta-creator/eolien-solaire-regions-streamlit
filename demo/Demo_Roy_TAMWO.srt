@@ -1,0 +1,64 @@
+1
+00:00:00,000 --> 00:00:20,000
+Roy TAMWO - Éolien et solaire dans les régions françaises
+En 2024, leur production équivaut à 16,2 % de la consommation annuelle.
+
+2
+00:00:20,000 --> 00:00:31,000
+Le filtre de période modifie la dernière année affichée.
+En passant à 2023, les chiffres clés et les graphiques se recalculent.
+
+3
+00:00:31,000 --> 00:00:45,000
+Retour à 2024. Le rapport compare des volumes annuels sur le même territoire.
+Il ne mesure pas l'autonomie électrique : les régions échangent de l'électricité.
+
+4
+00:00:45,000 --> 00:00:55,000
+En 2013, la production éolienne et solaire équivaut à 4,2 % de la consommation.
+Le survol permet de lire les valeurs exactes de la courbe.
+
+5
+00:00:55,000 --> 00:01:05,000
+Le rapport atteint 16,7 % en 2023.
+La progression s'observe sur plusieurs années, sans être régulière.
+
+6
+00:01:05,000 --> 00:01:15,000
+En 2024, le rapport revient à 16,2 %.
+Depuis 2013, la production est multipliée par 3,48 et la consommation baisse de 10,5 %.
+
+7
+00:01:15,000 --> 00:01:35,000
+En 2024, les Hauts-de-France atteignent 28,3 %, contre 1,0 % en Île-de-France.
+Le classement dépend de la production, mais aussi de la consommation régionale.
+
+8
+00:01:35,000 --> 00:01:45,000
+La carte reprend le même indicateur que les barres.
+Les régions se comparent ici en pourcentage, pas en volume absolu.
+
+9
+00:01:45,000 --> 00:01:57,000
+Sélection de quatre régions, puis passage aux volumes en TWh.
+Cela permet de comparer directement la production.
+
+10
+00:01:57,000 --> 00:02:05,000
+Avec le filtre Éolien, les Hauts-de-France et le Grand Est ressortent.
+Les filtres modifient aussi les chiffres clés et la carte.
+
+11
+00:02:05,000 --> 00:02:15,000
+Avec le filtre Solaire, la Nouvelle-Aquitaine et l'Occitanie passent devant.
+Le détail des filières explique des profils régionaux différents.
+
+12
+00:02:15,000 --> 00:02:28,000
+Aucune valeur manquante dans les variables utilisées, aucun doublon région-année.
+Les tableaux détaillés et le téléchargement permettent de vérifier les chiffres.
+
+13
+00:02:28,000 --> 00:02:40,000
+Pour aller plus loin : étudier les séries horaires, les capacités installées et la météo.
+Source : RTE / ODRE, Licence Ouverte 2.0. Roy TAMWO - 20230840 - I2-DE_02.
