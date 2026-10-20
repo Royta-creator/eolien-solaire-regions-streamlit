@@ -1,0 +1,83 @@
+{
+  "production_raw_rows": 234,
+  "consumption_raw_rows": 169,
+  "rows_after_join": 156,
+  "regions": 13,
+  "first_year": 2013,
+  "last_year": 2024,
+  "excluded_production_rows": 78,
+  "excluded_consumption_rows": 13,
+  "raw_production_duplicate_keys": 0,
+  "raw_consumption_duplicate_keys": 0,
+  "missing_by_column": {
+    "year": 0,
+    "code": 0,
+    "region": 0,
+    "wind_gwh": 0,
+    "solar_gwh": 0,
+    "consumption_gwh": 0,
+    "lat": 0,
+    "lon": 0
+  },
+  "source_production_missing_by_column": {
+    "Année": 0,
+    "Code INSEE région": 0,
+    "Région": 0,
+    "Production nucléaire (GWh)": 108,
+    "Production thermique (GWh)": 0,
+    "Production hydraulique (GWh)": 0,
+    "Production éolienne (GWh)": 3,
+    "Production solaire (GWh)": 0,
+    "Production bioénergies (GWh)": 1,
+    "Géo-shape région": 0,
+    "Géo-point région": 0
+  },
+  "source_consumption_missing_by_column": {
+    "Année": 0,
+    "Région": 0,
+    "Code INSEE région": 0,
+    "Statut - Teréga": 130,
+    "Consommation brute électricité (GWh) - RTE": 0,
+    "Statut - RTE": 0,
+    "Géo-shape région": 0,
+    "Géo-point région": 0,
+    "Consommation brute gaz (GWh PCS 0°C) - NaTran": 13,
+    "Statut - NaTran": 8,
+    "Consommation brute gaz (GWh PCS 0°C) - Teréga": 130,
+    "Consommation brute gaz totale (GWh PCS 0°C)": 13,
+    "Consommation brute totale (GWh)": 13
+  },
+  "missing_nuclear_regions": [
+    "Bourgogne-Franche-Comté",
+    "Bretagne",
+    "Corse",
+    "Pays de la Loire",
+    "Provence-Alpes-Côte d'Azur",
+    "Île-de-France"
+  ],
+  "missing_value_policy": "Aucune imputation. Les 72 cases nucléaires vides restent dans le fichier brut et cette variable est exclue du fichier analytique. Les calculs du projet utilisent uniquement éolien, solaire et consommation, sans données manquantes dans le périmètre 2013–2024.",
+  "consumption_status": "Définitif pour les 156 observations retenues; 2025 consolidé exclu.",
+  "join_validation": "one_to_one sur année et code INSEE région",
+  "negative_wind_solar_values": 0,
+  "nonpositive_consumption_values": 0,
+  "regions_per_year": {
+    "2013": 13,
+    "2014": 13,
+    "2015": 13,
+    "2016": 13,
+    "2017": 13,
+    "2018": 13,
+    "2019": 13,
+    "2020": 13,
+    "2021": 13,
+    "2022": 13,
+    "2023": 13,
+    "2024": 13
+  },
+  "files_sha256": {
+    "production_brute.csv": "7aeeb8678df56985bf5599ce3f124dcedf3b1e66fff6435a39d0e77b6af348dd",
+    "consommation_brute.csv": "93049d77e0e090e27cc32178a966a608a255f87d69be5330f61816c1b91424d5",
+    "normalized.csv": "e7bd64fabba9c5fc668c564eb6f63dd7ba6bf5ce20d7cc16b83c4d3e1d3984ad",
+    "regions.geojson": "f2bd3c55319f2da34d0f66e81c492d9f750a270542d59904d8a046db73a39f92"
+  }
+}

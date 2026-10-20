@@ -1,0 +1,23 @@
+Source : Open Data Réseaux Énergies (ODRE), RTE pour les champs électricité.
+Copie téléchargée le 20 octobre 2026.
+
+Données : Licence Ouverte / Open Licence 2.0 (Etalab).
+Texte de la licence :
+https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf
+
+Cette licence autorise la réutilisation, y compris commerciale, sous réserve de
+mentionner la paternité de l'information et sa date de mise à jour. Les calculs
+et présentations de ce projet ne sont pas une publication officielle de RTE.
+Le détail des transformations et des sources figure dans README.md,
+sources.json et scripts/prepare_data.py.
+
+Géométries : incluses dans la ressource ODRE.
+Attribution indiquée dans les métadonnées : INSEE IGN NaturalEarth.
+
+Production :
+https://www.data.gouv.fr/datasets/production-regionale-annuelle-par-filiere-2008-a-2025
+Consommation :
+https://www.data.gouv.fr/datasets/consommation-annuelle-brute-regionale
+
+La licence des données ne transfère aucun droit de marque et ne signifie pas
+que les producteurs approuvent les conclusions de ce projet.

@@ -1,0 +1,79 @@
+{
+  "scope": "France métropolitaine, Corse comprise, 13 régions, 2013–2024; consommation brute, pertes comprises, non corrigée du climat.",
+  "national_2013": {
+    "wind_gwh": 15941.4,
+    "solar_gwh": 4659.9,
+    "consumption_gwh": 494302.0,
+    "wind_solar_gwh": 20601.3,
+    "coverage_pct": 4.167755744463911
+  },
+  "national_2024": {
+    "wind_gwh": 46848.0,
+    "solar_gwh": 24769.0,
+    "consumption_gwh": 442335.0,
+    "wind_solar_gwh": 71617.0,
+    "coverage_pct": 16.190669967332454
+  },
+  "wind_solar_growth_pct": 247.6334017756161,
+  "wind_solar_multiplier": 3.476334017756161,
+  "coverage_gain_percentage_points": 12.022914222868543,
+  "consumption_change_pct": -10.51320852434342,
+  "top_coverage_2024": [
+    {
+      "region": "Hauts-de-France",
+      "coverage_pct": 28.32066672424216,
+      "wind_solar_gwh": 13117.0,
+      "consumption_gwh": 46316
+    },
+    {
+      "region": "Grand Est",
+      "coverage_pct": 26.05528846153846,
+      "wind_solar_gwh": 10839.0,
+      "consumption_gwh": 41600
+    },
+    {
+      "region": "Centre-Val de Loire",
+      "coverage_pct": 25.004245683555055,
+      "wind_solar_gwh": 4417.0,
+      "consumption_gwh": 17665
+    }
+  ],
+  "bottom_coverage_2024": [
+    {
+      "region": "Île-de-France",
+      "coverage_pct": 1.012208314016381,
+      "wind_solar_gwh": 655.0,
+      "consumption_gwh": 64710
+    },
+    {
+      "region": "Auvergne-Rhône-Alpes",
+      "coverage_pct": 7.037120287714341,
+      "wind_solar_gwh": 4383.0,
+      "consumption_gwh": 62284
+    },
+    {
+      "region": "Provence-Alpes-Côte d'Azur",
+      "coverage_pct": 9.17912404930501,
+      "wind_solar_gwh": 3500.0,
+      "consumption_gwh": 38130
+    }
+  ],
+  "top_volume_2024": [
+    {
+      "region": "Hauts-de-France",
+      "wind_solar_gwh": 13117.0
+    },
+    {
+      "region": "Grand Est",
+      "wind_solar_gwh": 10839.0
+    },
+    {
+      "region": "Nouvelle-Aquitaine",
+      "wind_solar_gwh": 9126.0
+    }
+  ],
+  "definitions": {
+    "coverage_pct": "100 × somme des productions éolienne et solaire (GWh) / somme de la consommation brute électricité (GWh), pour la même année et les mêmes régions. Une agrégation est un ratio de sommes, jamais la moyenne des ratios régionaux.",
+    "interpretation": "Rapport annuel de volumes, pas un indicateur d’autonomie électrique, pas la part de ces filières dans l’électricité effectivement consommée. Le réseau assure des échanges et la simultanéité n’est pas étudiée."
+  }
+}

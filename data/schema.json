@@ -1,0 +1,58 @@
+{
+  "grain": "Une ligne par année et code INSEE région.",
+  "key": [
+    "year",
+    "code"
+  ],
+  "columns": {
+    "year": {
+      "type": "integer",
+      "meaning": "Année civile",
+      "range": [
+        2013,
+        2024
+      ]
+    },
+    "code": {
+      "type": "string",
+      "meaning": "Code INSEE de la région, conservé comme texte"
+    },
+    "region": {
+      "type": "string",
+      "meaning": "Libellé de la région dans la source"
+    },
+    "wind_gwh": {
+      "type": "float",
+      "unit": "GWh",
+      "meaning": "Production électrique éolienne annuelle"
+    },
+    "solar_gwh": {
+      "type": "float",
+      "unit": "GWh",
+      "meaning": "Production électrique solaire annuelle"
+    },
+    "consumption_gwh": {
+      "type": "float",
+      "unit": "GWh",
+      "meaning": "Consommation brute annuelle électrique RTE, pertes comprises, non corrigée du climat"
+    },
+    "lat": {
+      "type": "float",
+      "unit": "degrees",
+      "meaning": "Latitude du géopoint de région fourni par ODRÉ"
+    },
+    "lon": {
+      "type": "float",
+      "unit": "degrees",
+      "meaning": "Longitude du géopoint de région fourni par ODRÉ"
+    }
+  },
+  "geojson": "FeatureCollection, 13 features. Chaque feature possède id = code INSEE, properties.code et properties.region. Géométries source conservées sans simplification.",
+  "derived_formulas": {
+    "wind_solar_gwh": "wind_gwh + solar_gwh",
+    "coverage_pct": "100 * sum(wind_gwh + solar_gwh) / sum(consumption_gwh) pour une année et un ensemble de régions",
+    "growth_pct": "100 * (volume_fin / volume_début - 1)",
+    "change_pp": "couverture_fin - couverture_début",
+    "twh": "gwh / 1000"
+  }
+}

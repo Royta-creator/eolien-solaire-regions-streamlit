@@ -1,0 +1,58 @@
+{
+  "snapshot_date": "2026-10-20",
+  "publisher": "Open Data Réseaux Énergies (ODRÉ); producteurs : NaTran, RTE, Teréga. Champs électricité : RTE.",
+  "license": "Licence Ouverte / Open Licence 2.0 (Etalab)",
+  "license_url": "https://www.etalab.gouv.fr/wp-content/uploads/2017/04/ETALAB-Licence-Ouverte-v2.0.pdf",
+  "attribution": "Source : ODRÉ / RTE, données téléchargées le 20 octobre 2026, Licence Ouverte 2.0. Préparation et calculs pour le projet de Roy TAMWO.",
+  "geography_attribution": "Géométries et géopoints inclus dans la ressource ODRÉ; attribution de la métadonnée source : INSEE IGN NaturalEarth.",
+  "datasets": [
+    {
+      "name": "Production régionale annuelle par filière (2008 à 2025)",
+      "portal_url": "https://www.data.gouv.fr/datasets/production-regionale-annuelle-par-filiere-2008-a-2025",
+      "source_url": "https://odre.opendatasoft.com/explore/dataset/prod-region-annuelle-filiere/",
+      "resource_url": "https://www.data.gouv.fr/api/1/datasets/r/9a549079-88ce-4a97-9bc7-4f387de8cd5b",
+      "download_url": "https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/prod-region-annuelle-filiere/exports/csv?use_labels=true",
+      "metadata_api_url": "https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/prod-region-annuelle-filiere",
+      "filename": "production_brute.csv",
+      "rows": 234,
+      "years": "2008–2025",
+      "unit_used": "GWh, conformément aux libellés des colonnes",
+      "sha256": "7aeeb8678df56985bf5599ce3f124dcedf3b1e66fff6435a39d0e77b6af348dd"
+    },
+    {
+      "name": "Consommation annuelle brute régionale",
+      "portal_url": "https://www.data.gouv.fr/datasets/consommation-annuelle-brute-regionale",
+      "source_url": "https://odre.opendatasoft.com/explore/dataset/consommation-annuelle-brute-regionale/",
+      "resource_url": "https://www.data.gouv.fr/api/1/datasets/r/20cbe478-4ee4-42e7-ad54-174f7e1f3a40",
+      "download_url": "https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/consommation-annuelle-brute-regionale/exports/csv?use_labels=true",
+      "metadata_api_url": "https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/consommation-annuelle-brute-regionale",
+      "filename": "consommation_brute.csv",
+      "rows": 169,
+      "years": "2013–2025",
+      "unit_used": "GWh pour la consommation brute électricité RTE; les colonnes gaz ne sont pas utilisées.",
+      "sha256": "93049d77e0e090e27cc32178a966a608a255f87d69be5330f61816c1b91424d5"
+    }
+  ],
+  "analysis_scope": {
+    "first_year": 2013,
+    "last_year": 2024,
+    "regions": 13,
+    "rows": 156,
+    "geography": "France métropolitaine, Corse comprise. Outre-mer exclu.",
+    "electricity_consumption": "Brute, pertes comprises, sans correction climatique.",
+    "period_reason": "2013 est le début commun des séries. 2024 est la dernière année au statut Définitif pour les 13 régions de la ressource de consommation; 2025 est Consolidé."
+  },
+  "source_caveats": [
+    "La présentation générale de la ressource de production mentionne TWh et gaz, alors que les colonnes utilisées concernent bien l’électricité en GWh. Le calcul suit les libellés des colonnes; conversion TWh = GWh / 1000.",
+    "La date de modification des métadonnées ne reflète pas toujours la dernière donnée. Les bornes temporelles sont vérifiées dans les lignes et les métadonnées API brutes sont conservées.",
+    "ODRÉ indique une révision de l’autoconsommation photovoltaïque sur 2022–2024; les séries téléchargées intègrent cette révision.",
+    "La source comporte des valeurs manquantes pour d’autres filières, notamment nucléaire. Elles ne sont pas imputées et ces filières ne servent à aucun calcul du projet.",
+    "Le rapport annuel production éolienne+solaire / consommation brute ne mesure ni autonomie, ni simultanéité, ni le contenu électrique effectivement consommé.",
+    "Les régions diffèrent en taille, population, activité et géographie. Un classement de volumes ne permet pas d’attribuer un mérite ou un effet causal.",
+    "Les données annuelles ne permettent pas une analyse de saisonnalité, de météo ou de variabilité horaire. Éolien+solaire ne représentent pas toutes les énergies renouvelables."
+  ],
+  "derived_files_sha256": {
+    "normalized.csv": "e7bd64fabba9c5fc668c564eb6f63dd7ba6bf5ce20d7cc16b83c4d3e1d3984ad",
+    "regions.geojson": "f2bd3c55319f2da34d0f66e81c492d9f750a270542d59904d8a046db73a39f92"
+  }
+}
