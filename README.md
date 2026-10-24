@@ -9,8 +9,10 @@ Projet individuel Streamlit, EFREI, 2026
 - [Dépôt GitHub](https://github.com/Royta-creator/eolien-solaire-regions-streamlit)
 - [Rapport et storyboard](docs/Rapport_Roy_TAMWO.pdf)
 - [Présentation simple](docs/Presentation_Roy_TAMWO.pdf)
-- [Vidéo de démonstration — 2 min 55, version du 24 octobre 2026](demo/Demo_Roy_TAMWO.mp4)
-- [Sous-titres de la vidéo](demo/Demo_Roy_TAMWO.srt)
+- [Vidéo de démonstration en français — 2 min 55, version du 24 octobre 2026](demo/Demo_Roy_TAMWO.mp4)
+- [Sous-titres français](demo/Demo_Roy_TAMWO.srt)
+- [Demo video in English — 2 min 55, 24 October 2026 version](demo/Demo_Roy_TAMWO_EN.mp4)
+- [English subtitles](demo/Demo_Roy_TAMWO_EN.srt)
 
 ## La question
 
@@ -119,7 +121,7 @@ data/                       CSV bruts, panel, carte, métadonnées et contrôles
 scripts/                    téléchargement et préparation reproductible
 tests/test_project.py       vérifications données, calculs, filtres et carte
 docs/                       rapport, présentation simple et storyboard
-demo/                       vidéo de démonstration sous-titrée
+demo/                       vidéos de démonstration française et anglaise, sous-titrées
 requirements*.txt           versions des dépendances
 .streamlit/config.toml      thème et configuration
 ```
@@ -138,10 +140,10 @@ Le script de préparation retrouve les mêmes données, même si les fins de lig
 
 L'application est publiée sur [Streamlit Community Cloud](https://roy-tamwo-eolien-solaire.streamlit.app/) depuis la branche `main` du [dépôt GitHub](https://github.com/Royta-creator/eolien-solaire-regions-streamlit). Le point d'entrée est `app.py`, avec Python 3.12. Aucun secret n'est nécessaire. `requirements.txt` utilise les mêmes versions qu'en local. PyArrow est fixé à 24.0.0, la version choisie par la plateforme lors du déploiement. Les étapes sont décrites dans la [procédure officielle Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app).
 
-Les graphiques et le recalcul des indicateurs ont été vérifiés sur l'application en ligne. Le rapport contient le storyboard. La vidéo du 24 octobre 2026 dure 2 min 55. C'est un montage de captures réelles successives du tableau de bord, avec des sous-titres français et sans piste audio. Les vues montrent la barre latérale, le choix de langue et les résultats obtenus avec les filtres ; il ne s'agit pas d'une capture continue des manipulations. Tous les liens à joindre au rendu sont aussi dans `LIENS_REMISE.txt`.
+Les graphiques et le recalcul des indicateurs ont été vérifiés sur l'application en ligne. Le rapport contient le storyboard. Deux vidéos présentent la version du 24 octobre 2026, chacune en 2 min 55 : `Demo_Roy_TAMWO.mp4`, avec des sous-titres français, et `Demo_Roy_TAMWO_EN.mp4`, avec l'interface et les sous-titres en anglais. La vidéo française est conservée. Les deux vidéos sont des montages de captures réelles successives du tableau de bord, sans piste audio. Les vues montrent la barre latérale, le choix de langue et les résultats obtenus avec les filtres ; il ne s'agit pas de captures continues des manipulations. Tous les liens à joindre au rendu sont aussi dans `LIENS_REMISE.txt`.
 
 Nom de remise : **StApp26_20230840_TAMWO_DE2.zip**. Le suffixe DE2 correspond au groupe indiqué **I2-DE_02**.
 
 ## Mise à jour du 24 octobre 2026
 
-La barre latérale a été réorganisée et l'application est maintenant disponible en français et en anglais. Le [logo officiel EFREI](https://www.efrei.fr/wp-content/uploads/2025/09/Logo-Efrei-CMJN-1024x512.png) a été téléchargé le 24 octobre 2026 pour identifier l'école. La vidéo et ses sous-titres ont été mis à jour pour présenter cette version. Le rapport et la présentation PDF du premier rendu sont conservés.
+La barre latérale a été réorganisée et l'application est maintenant disponible en français et en anglais. Le [logo officiel EFREI](https://www.efrei.fr/wp-content/uploads/2025/09/Logo-Efrei-CMJN-1024x512.png) a été téléchargé le 24 octobre 2026 pour identifier l'école. La vidéo française et ses sous-titres présentent cette version ; une seconde vidéo en anglais est également fournie. Le rapport et la présentation PDF du premier rendu sont conservés.
