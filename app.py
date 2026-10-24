@@ -102,9 +102,9 @@ with st.sidebar:
         st.image(str(ROOT / "assets" / "efrei-logo.png"), width=160)
 
 st.title(tr("Éolien et solaire", "Wind and solar"))
-st.subheader(tr("Quelle place dans la consommation des régions ?", "How much of regional consumption do they represent?"))
-st.write(tr("En France, la production éolienne et solaire a augmenté depuis 2013. Mais les régions n'ont pas le même profil. Ce tableau de bord compare les volumes produits et leur rapport à la consommation annuelle, pour un public qui souhaite comprendre ces écarts sans entrer dans les détails techniques du réseau.",
-            "Wind and solar generation in France has increased since 2013, but regions have different profiles. This dashboard compares generation and its ratio to annual electricity consumption, for anyone who wants to understand these differences without going into the technical details of the grid."))
+st.subheader(tr("Où en sont les régions françaises ?", "How do French regions compare?"))
+st.write(tr("On produit plus d'électricité avec le vent et le soleil qu'en 2013. Mais cette hausse n'est pas la même partout. Ici, on regarde comment la production a évolué dans les régions françaises et ce qu'elle représente par rapport à leur consommation. Les filtres à gauche permettent de comparer les régions, les années et les deux énergies.",
+            "France produces more electricity from wind and solar than it did in 2013, but growth varies from one region to another. Here, we look at how generation has changed and how it compares with each region's electricity use. Use the filters on the left to compare regions, years and the two energy sources."))
 
 if not regions:
     st.info(tr("Choisissez au moins une région dans le menu de gauche.", "Select at least one region in the sidebar."))
@@ -129,64 +129,65 @@ change = last.coverage_pct - first.coverage_pct
 c4.metric(tr(f"Écart depuis {period[0]}", f"Change since {period[0]}"),
           tr(f"{number(change)} points", f"{number(change)} pp") if period[0] != period[1] else tr("Une seule année", "One year only"))
 
-st.info(tr("Lecture : un rapport de 20 % signifie que la production annuelle étudiée équivaut à un cinquième de la consommation annuelle. Les échanges entre régions et les variations horaires empêchent d'en déduire une autonomie électrique.",
-           "How to read this: a ratio of 20% means annual generation is equivalent to one fifth of annual consumption. Exchanges between regions and hourly variations mean this does not measure electricity self-sufficiency."))
+st.info(tr("Par exemple, 20 % veut dire que la production représente l'équivalent d'un cinquième de la consommation sur l'année. Cela ne veut pas dire que la région se suffit à elle-même : l'électricité circule entre les régions, et on ne produit pas toujours au moment où l'on en a besoin.",
+           "For example, 20% means generation is equivalent to a fifth of the electricity used over the year. It doesn't mean the region can meet its own needs: electricity moves between regions, and generation doesn't always match when people need it."))
 
-st.header(tr("1. Une progression à regarder sur plusieurs années", "1. Look at the trend over several years"))
+st.header(tr("1. La production au fil des années", "1. How generation has changed over time"))
 if period[0] != period[1]:
-    st.write(tr(f"Sur le périmètre choisi, la production passe de **{number(first.production_twh)} à {number(last.production_twh)} TWh**. Le rapport à la consommation passe de **{number(first.coverage_pct)} % à {number(last.coverage_pct)} %**.",
-                f"Across the selected regions, generation changes from **{number(first.production_twh)} to {number(last.production_twh)} TWh**. The ratio to consumption changes from **{number(first.coverage_pct)}% to {number(last.coverage_pct)}%**."))
+    st.write(tr(f"Dans les régions choisies, la production passe de **{number(first.production_twh)} à {number(last.production_twh)} TWh** entre {period[0]} et {period[1]}. Cela représente **{number(first.coverage_pct)} % de la consommation au départ, contre {number(last.coverage_pct)} % à la fin**.",
+                f"In the selected regions, generation goes from **{number(first.production_twh)} to {number(last.production_twh)} TWh** between {period[0]} and {period[1]}. That's equivalent to **{number(first.coverage_pct)}% of consumption at the start and {number(last.coverage_pct)}% at the end**."))
     previous = annual.iloc[-2]
     if last.coverage_pct < previous.coverage_pct:
-        st.caption(tr(f"La progression n'est pas continue : le rapport baisse de {number(previous.coverage_pct)} % en {int(previous.year)} à {number(last.coverage_pct)} % en {int(last.year)}.",
-                      f"Growth is not continuous: the ratio falls from {number(previous.coverage_pct)}% in {int(previous.year)} to {number(last.coverage_pct)}% in {int(last.year)}."))
+        st.caption(tr(f"Ce rapport ne monte pas chaque année : il passe de {number(previous.coverage_pct)} % en {int(previous.year)} à {number(last.coverage_pct)} % en {int(last.year)}.",
+                      f"This ratio doesn't rise every year: it goes from {number(previous.coverage_pct)}% in {int(previous.year)} to {number(last.coverage_pct)}% in {int(last.year)}."))
 else:
-    st.write(tr("Une seule année est sélectionnée. Élargissez la période pour étudier une évolution.", "Only one year is selected. Widen the period to explore a trend."))
+    st.write(tr("Une seule année est sélectionnée. Choisissez plusieurs années pour voir comment les chiffres évoluent.", "You've selected one year. Choose a longer period to see how the figures change."))
 st.plotly_chart(trend(annual, metric, unit, lang=lang), use_container_width=True, key="trend")
-st.caption(tr(f"Description du graphique : évolution annuelle de {tech_label.lower()}, exprimée en {unit}, dans les régions sélectionnées. Les valeurs exactes figurent dans le tableau accessible en bas de page.",
-              f"Chart description: annual trend for {tech_label.lower()}, expressed in {unit}, across the selected regions. Exact values are available in the accessible table at the bottom of the page."))
+measure_label = tr("le rapport production / consommation", "the generation-to-consumption ratio") if metric == "coverage_pct" else tr("la production", "generation")
+st.caption(tr(f"Description du graphique : la courbe montre {measure_label} année par année, en {unit}, pour la filière « {tech_label.lower()} ». Le tableau en bas de page donne les valeurs exactes.",
+              f"Chart description: the line shows {measure_label} year by year, in {unit}, for {tech_label.lower()}. The table at the bottom of the page gives the exact values."))
 
-st.header(tr(f"2. Des profils régionaux différents en {period[1]}", f"2. Different regional profiles in {period[1]}"))
+st.header(tr(f"2. Quelles régions arrivent en tête en {period[1]} ?", f"2. Which regions come out on top in {period[1]}?"))
 leader = latest.sort_values(metric, ascending=False).iloc[0]
-st.write(tr(f"**{leader.region}** affiche la valeur la plus élevée parmi les régions choisies : **{number(leader[metric])} {unit}**. Le classement change selon que l'on compare des volumes ou un rapport à la consommation.",
-            f"**{leader.region}** has the highest value among the selected regions: **{number(leader[metric])} {unit}**. Rankings differ depending on whether you compare volumes or the ratio to consumption."))
+st.write(tr(f"Avec **{number(leader[metric])} {unit}**, **{leader.region}** arrive en tête de la sélection. Essayez de passer des TWh au pourcentage dans les filtres : produire beaucoup et produire beaucoup par rapport à sa consommation, ce n'est pas la même chose.",
+            f"**{leader.region}** comes out on top in this selection, with **{number(leader[metric])} {unit}**. Try switching between TWh and percentages in the filters: a region can produce a lot of electricity and still use much more."))
 left, right = st.columns(2)
 with left:
     st.plotly_chart(ranking(latest, metric, unit, lang=lang), use_container_width=True, key="ranking")
 with right:
     st.plotly_chart(region_map(latest, geography, metric, unit, lang=lang), use_container_width=True, key="map")
-st.caption(tr(f"Description : le classement et la carte représentent le même indicateur ({unit}) pour la dernière année sélectionnée. Survolez une barre ou une région pour lire sa valeur. Les zones blanches ne font pas partie de la sélection.",
-              f"Description: the ranking and map show the same indicator ({unit}) for the last selected year. Hover over a bar or a region to see its value. White areas are outside the selection."))
+st.caption(tr(f"Le classement et la carte montrent les mêmes chiffres, en {unit}, pour {period[1]}. Passez la souris sur une barre ou une région pour voir sa valeur. Les zones blanches sont les régions non sélectionnées.",
+              f"The ranking and map show the same figures, in {unit}, for {period[1]}. Hover over a bar or a region to see its value. White areas are regions outside your selection."))
 
-st.header(tr("3. Séparer l'éolien et le solaire aide à comprendre le total", "3. Separate wind and solar to understand the total") if technology == "Éolien + solaire" else tr(f"3. Les volumes produits : {tech_label.lower()}", f"3. Generation volumes: {tech_label.lower()}"))
-st.write(tr("Le rapport à la consommation dépend à la fois de la production et de la demande. Ce graphique revient aux volumes produits pour rendre leur évolution plus facile à lire.",
-            "The ratio to consumption depends on both generation and demand. This chart returns to generation volumes to make their changes easier to read."))
+st.header(tr("3. L'éolien et le solaire, séparément", "3. How much comes from wind and solar?") if technology == "Éolien + solaire" else tr(f"3. La production de la filière {tech_label.lower()}", f"3. A closer look at {tech_label.lower()}"))
+st.write(tr("Le pourcentage peut changer parce qu'on produit plus, mais aussi parce qu'on consomme moins. Pour voir ce qui se passe du côté de la production, ce graphique montre directement les quantités d'électricité produites.",
+            "The percentage can change because generation rises, but also because consumption falls. To focus on generation, this chart shows how much electricity was actually produced."))
 st.plotly_chart(production_mix(annual, TECHNOLOGIES[technology], lang=lang), use_container_width=True, key="mix")
-st.caption(tr(f"Description : chaque barre représente une année. Filière affichée : {tech_label.lower()}. L'éolien est bleu, le solaire orange. L'axe vertical mesure la production en TWh (1 TWh = 1 000 GWh).",
-              f"Description: each bar represents a year. Technology shown: {tech_label.lower()}. Wind is blue and solar is orange. The vertical axis measures generation in TWh (1 TWh = 1,000 GWh)."))
+st.caption(tr(f"Une barre par année, pour la filière « {tech_label.lower()} ». Le bleu correspond à l'éolien, l'orange au solaire. La hauteur donne la production en TWh : 1 TWh = 1 000 GWh.",
+              f"One bar per year, showing {tech_label.lower()}. Blue is wind, orange is solar. The height shows generation in TWh: 1 TWh = 1,000 GWh."))
 
-st.header(tr("Ce que l'on peut en retenir", "What we can learn"))
-st.write(tr(f"Pour {scope.lower()}, le rapport annuel atteint **{number(last.coverage_pct)} % en {period[1]}**. Comparer les régions aide à situer la production, mais ne suffit pas à expliquer les écarts : il faudrait aussi connaître la puissance installée, la météo et la demande locale.",
-            f"For {scope.lower()}, the annual ratio reaches **{number(last.coverage_pct)}% in {period[1]}**. Comparing regions helps put generation in context, but does not explain the differences on its own: installed capacity, weather and local demand also matter."))
-st.write(tr("Pour prolonger l'analyse, je regarderais les séries horaires et les capacités installées. Cela permettrait de distinguer l'effet des nouveaux équipements de celui des conditions de production.",
-            "To extend this analysis, I would look at hourly time series and installed capacity. This would help separate the effect of new equipment from that of generation conditions."))
+st.header(tr("Ce qu'on peut retenir", "What this tells us"))
+st.write(tr(f"En {period[1]}, la production étudiée représente l'équivalent de **{number(last.coverage_pct)} % de la consommation** des régions choisies. On voit les écarts entre les régions, mais ces chiffres ne disent pas à eux seuls pourquoi ils existent. La météo, les équipements installés et les besoins en électricité comptent aussi.",
+            f"In {period[1]}, the generation shown here is equivalent to **{number(last.coverage_pct)}% of consumption** in the selected regions. We can see the differences between regions, but these figures alone don't explain why they exist. Weather, installed equipment and electricity needs also matter."))
+st.write(tr("Pour aller plus loin, il faudrait regarder la production heure par heure et les équipements de chaque région. On pourrait alors mieux comprendre ce qui vient des nouvelles installations et ce qui vient des conditions météo.",
+            "A useful next step would be to look at hourly generation and the equipment in each region. That would help us understand how much of the change comes from new installations and how much comes from the weather."))
 
-st.header(tr("Qualité des données et méthode", "Data quality and methodology"))
+st.header(tr("D'où viennent les chiffres et comment sont-ils calculés ?", "Where do the figures come from, and how are they calculated?"))
 q1, q2, q3 = st.columns(3)
 q1.metric(tr("Observations sélectionnées", "Selected observations"), str(len(selected)))
 q2.metric(tr("Valeurs manquantes utiles", "Missing values in used fields"), str(int(selected[["wind_gwh", "solar_gwh", "consumption_gwh"]].isna().sum().sum())))
 q3.metric(tr("Doublons région / année", "Duplicate region / year pairs"), str(int(selected.duplicated(["code", "year"]).sum())))
-st.write(tr("Le panel complet contient 156 observations : 13 régions sur 12 années. Les deux jeux ODRE sont joints par code INSEE et année, avec une seule ligne de chaque côté. Les volumes retenus sont positifs ou nuls et la consommation est strictement positive. Aucune valeur utile n'a été imputée.",
-            "The full panel contains 156 observations: 13 regions over 12 years. The two ODRE datasets are joined by INSEE code and year, with one row on each side. Generation volumes are non-negative and consumption is strictly positive. No values in the fields used have been imputed."))
-st.write(tr("Le périmètre s'arrête en 2024 : le statut RTE de la consommation est définitif pour toutes les observations retenues. Les données 2025, consolidées au téléchargement, sont exclues. Les autres filières du fichier de production ne sont pas utilisées.",
-            "The analysis ends in 2024: RTE marks consumption as final for all included observations. The 2025 data, marked as consolidated when downloaded, are excluded. Other technologies in the generation file are not used."))
-st.write(tr("La consommation brute inclut les pertes et n'est pas corrigée du climat. ODRE signale une révision de l'autoconsommation photovoltaïque sur 2022–2024, déjà intégrée à cette copie. Les calculs suivent les colonnes explicitement libellées en GWh, malgré une mention générale en TWh dans la description du portail.",
-            "Gross consumption includes losses and is not weather-adjusted. ODRE reports a revision of solar self-consumption for 2022–2024, already included in this snapshot. Calculations use columns explicitly labelled in GWh, despite a general reference to TWh in the portal description."))
-st.write(tr("Calcul : rapport (%) = 100 × somme des productions sélectionnées / somme des consommations. Les rapports régionaux ne sont pas moyennés. Les volumes annuels ne décrivent ni les pointes de demande, ni les importations, ni les émissions de CO₂. Ces données agrégées ne contiennent aucune information personnelle.",
-            "Calculation: ratio (%) = 100 × sum of selected generation / sum of consumption. Regional ratios are not averaged. Annual volumes do not describe peak demand, imports or CO₂ emissions. These aggregated datasets contain no personal information."))
+st.write(tr("Les données couvrent 13 régions sur 12 ans, soit 156 lignes. Pour chaque région et chaque année, on rapproche la production et la consommation grâce au code INSEE. Chaque paire région–année n'apparaît qu'une fois. Il ne manque aucune valeur dans les colonnes utilisées, donc rien n'a été remplacé par une estimation. Les productions sont positives ou nulles, et la consommation est toujours supérieure à zéro.",
+            "The data covers 13 regions over 12 years, giving 156 rows. Generation and consumption are matched using the INSEE region code and the year. Each region–year pair appears only once. None of the fields used has missing values, so nothing has been filled in with an estimate. Generation is zero or positive, and consumption is always above zero."))
+st.write(tr("L'étude s'arrête en 2024, car les chiffres de consommation sont définitifs jusqu'à cette année-là. Au moment du téléchargement, ceux de 2025 étaient encore au statut « consolidé ». Ils ne sont donc pas utilisés ici. Les autres énergies présentes dans le fichier, comme le nucléaire, restent aussi en dehors de l'étude.",
+            "The study stops in 2024 because consumption figures are final up to that year. When the data was downloaded, the 2025 figures were still marked as 'consolidated', so they aren't included here. Other energy sources in the file, such as nuclear, are also outside this study."))
+st.write(tr("Quelques détails à garder en tête : la consommation inclut les pertes d'électricité et n'est pas ajustée pour tenir compte de la météo. ODRE a aussi revu les chiffres de l'électricité solaire consommée directement par ses producteurs sur 2022–2024 ; cette correction est déjà dans les fichiers. Pour les unités, on suit les colonnes du CSV, indiquées en GWh, même si la description du portail mentionne aussi les TWh.",
+            "A few details matter: consumption includes electricity losses and isn't adjusted for the weather. ODRE also revised the figures for solar electricity used directly by its producers in 2022–2024; that correction is already in these files. For units, we use GWh as shown in the CSV columns, even though the portal description also mentions TWh."))
+st.write(tr("Pour calculer le rapport, on additionne d'abord les productions des régions choisies, puis on divise par leur consommation totale et on multiplie par 100. On ne fait donc pas la moyenne de leurs pourcentages. Ces totaux annuels ne montrent pas les pics de consommation, les importations ou les émissions de CO₂. Les données sont regroupées par région et ne contiennent pas d'informations personnelles.",
+            "To calculate the ratio, we first add up generation in the selected regions, divide by their total consumption, then multiply by 100. We don't average the regional percentages. These yearly totals don't show peak demand, imports or CO₂ emissions. The data is grouped by region and contains no personal information."))
 
-with st.expander(tr("Tableaux accessibles et téléchargement", "Accessible tables and download")):
-    st.write(tr("Série annuelle du périmètre sélectionné", "Annual series for the selected regions"))
+with st.expander(tr("Voir les tableaux et télécharger les données", "View the tables and download the data")):
+    st.write(tr("Les chiffres année par année", "The figures, year by year"))
     readable = annual[["year", "production_twh", "consumption_gwh", "coverage_pct"]].rename(columns={"year": tr("Année", "Year"), "production_twh": tr("Production (TWh)", "Generation (TWh)"), "consumption_gwh": tr("Consommation (GWh)", "Consumption (GWh)"), "coverage_pct": tr("Rapport (%)", "Ratio (%)")})
     st.dataframe(readable, hide_index=True, width="stretch")
     st.write(tr(f"Valeurs régionales en {period[1]}", f"Regional values in {period[1]}"))
@@ -194,8 +195,8 @@ with st.expander(tr("Tableaux accessibles et téléchargement", "Accessible tabl
     st.download_button(tr("Télécharger les données filtrées (CSV)", "Download filtered data (CSV)"), selected.to_csv(index=False).encode("utf-8-sig"), file_name="electricite_regions_selection.csv", mime="text/csv")
 
 with st.expander(tr("Sources et définitions", "Sources and definitions")):
-    st.markdown(tr("**Producteur : RTE.** Portail de diffusion : Open Data Réseaux Énergies (ODRE). Jeux référencés sur data.gouv.fr. Réutilisation sous Licence Ouverte 2.0, avec attribution.",
-                   "**Producer: RTE.** Distribution portal: Open Data Réseaux Énergies (ODRE). Datasets listed on data.gouv.fr. Reuse under the French Open Licence 2.0, with attribution."))
+    st.markdown(tr("Les données viennent de **RTE**. Elles sont disponibles sur Open Data Réseaux Énergies (ODRE) et référencées sur data.gouv.fr. La Licence Ouverte 2.0 permet de les réutiliser en citant la source.",
+                   "The data comes from **RTE**. It's available on Open Data Réseaux Énergies (ODRE) and listed on data.gouv.fr. The French Open Licence 2.0 allows reuse as long as the source is credited."))
     for source in sources["datasets"]:
         st.markdown(f"[{source['name']}]({source['portal_url']}) · [{tr('Ressource ODRE', 'ODRE resource')}]({source['source_url']})")
     st.caption(tr("Copie téléchargée le 20 octobre 2026. Contours géographiques inclus dans la source ODRE : attribution INSEE, IGN, NaturalEarth. Licence Ouverte 2.0.",
