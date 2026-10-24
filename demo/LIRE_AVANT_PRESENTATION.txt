@@ -1,12 +1,17 @@
 Démonstration du tableau de bord
 Roy TAMWO - 20230840 - I2-DE_02
 
-Demo_Roy_TAMWO.mp4 dure 2 minutes 55 et présente la version du 24 octobre 2026.
-Il s'agit d'un montage de captures réelles successives de l'application,
-et non d'une capture continue des manipulations. La barre latérale, le choix
-français/anglais, les filtres et leurs résultats sont visibles.
-Les explications apparaissent en sous-titres français. La vidéo n'a pas de piste audio.
-Demo_Roy_TAMWO.srt contient le texte des sous-titres.
+Deux vidéos de 2 minutes 55 présentent la version du 24 octobre 2026 :
+- Demo_Roy_TAMWO.mp4 : démonstration avec sous-titres français.
+  Demo_Roy_TAMWO.srt contient les sous-titres français.
+- Demo_Roy_TAMWO_EN.mp4 : interface et sous-titres en anglais.
+  Demo_Roy_TAMWO_EN.srt contient les sous-titres anglais.
+
+La vidéo française est conservée ; la vidéo anglaise est fournie en complément.
+Il s'agit de montages de captures réelles successives de l'application,
+et non de captures continues des manipulations. La barre latérale, le choix
+de langue, les filtres et leurs résultats sont visibles.
+Les explications apparaissent en sous-titres. Les deux vidéos sont sans piste audio.
 
 Le déroulé oral se trouve page 3 du rapport. La présentation PDF contient
 six pages de support. Avant un passage à l'oral, ouvrir le tableau de bord
