@@ -1,9 +1,11 @@
 Démonstration du tableau de bord
 Roy TAMWO - 20230840 - I2-DE_02
 
-Demo_Roy_TAMWO.mp4 dure 2 minutes 40. Il s'agit d'une capture réelle de
-l'application, avec les filtres, les survols, la carte et les résultats.
-Les explications apparaissent en sous-titres. La vidéo n'a pas de voix off.
+Demo_Roy_TAMWO.mp4 dure 2 minutes 55 et présente la version du 24 octobre 2026.
+Il s'agit d'un montage de captures réelles successives de l'application,
+et non d'une capture continue des manipulations. La barre latérale, le choix
+français/anglais, les filtres et leurs résultats sont visibles.
+Les explications apparaissent en sous-titres français. La vidéo n'a pas de piste audio.
 Demo_Roy_TAMWO.srt contient le texte des sous-titres.
 
 Le déroulé oral se trouve page 3 du rapport. La présentation PDF contient

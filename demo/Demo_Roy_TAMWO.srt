@@ -1,64 +1,79 @@
 1
-00:00:00,000 --> 00:00:20,000
-Roy TAMWO - Éolien et solaire dans les régions françaises
-En 2024, leur production équivaut à 16,2 % de la consommation annuelle.
+00:00:00,000 --> 00:00:10,000
+Roy TAMWO — Éolien et solaire dans les régions françaises.
+Quelle place prennent ces deux énergies entre 2013 et 2024 ?
 
 2
-00:00:20,000 --> 00:00:31,000
-Le filtre de période modifie la dernière année affichée.
-En passant à 2023, les chiffres clés et les graphiques se recalculent.
+00:00:10,000 --> 00:00:20,000
+En 2024, leur production atteint 71,6 TWh.
+Cela représente l'équivalent de 16,2 % de la consommation annuelle.
 
 3
-00:00:31,000 --> 00:00:45,000
-Retour à 2024. Le rapport compare des volumes annuels sur le même territoire.
-Il ne mesure pas l'autonomie électrique : les régions échangent de l'électricité.
+00:00:20,000 --> 00:00:30,000
+Ce pourcentage ne mesure pas l'autonomie d'une région.
+L'électricité circule, et la production ne suit pas toujours les besoins.
 
 4
-00:00:45,000 --> 00:00:55,000
-En 2013, la production éolienne et solaire équivaut à 4,2 % de la consommation.
-Le survol permet de lire les valeurs exactes de la courbe.
+00:00:30,000 --> 00:00:43,000
+La production passe de 20,6 à 71,6 TWh entre 2013 et 2024.
+Le rapport à la consommation passe de 4,2 % à 16,2 %.
 
 5
-00:00:55,000 --> 00:01:05,000
-Le rapport atteint 16,7 % en 2023.
-La progression s'observe sur plusieurs années, sans être régulière.
+00:00:43,000 --> 00:00:54,000
+Mais ce rapport ne monte pas chaque année.
+Il atteint 16,7 % en 2023, puis redescend à 16,2 % en 2024.
 
 6
-00:01:05,000 --> 00:01:15,000
-En 2024, le rapport revient à 16,2 %.
-Depuis 2013, la production est multipliée par 3,48 et la consommation baisse de 10,5 %.
+00:00:54,000 --> 00:01:07,000
+En 2024 : 28,3 % dans les Hauts-de-France, contre 1,0 % en Île-de-France.
+La carte permet de retrouver ces différences entre les régions.
 
 7
-00:01:15,000 --> 00:01:35,000
-En 2024, les Hauts-de-France atteignent 28,3 %, contre 1,0 % en Île-de-France.
-Le classement dépend de la production, mais aussi de la consommation régionale.
+00:01:07,000 --> 00:01:20,000
+Les filtres permettent de garder seulement les régions à comparer.
+Le classement, la carte et les chiffres se mettent à jour ensemble.
 
 8
-00:01:35,000 --> 00:01:45,000
-La carte reprend le même indicateur que les barres.
-Les régions se comparent ici en pourcentage, pas en volume absolu.
+00:01:20,000 --> 00:01:31,000
+On peut aussi comparer les volumes en TWh.
+Une forte production ne veut pas dire qu'elle couvre tous les besoins.
 
 9
-00:01:45,000 --> 00:01:57,000
-Sélection de quatre régions, puis passage aux volumes en TWh.
-Cela permet de comparer directement la production.
+00:01:31,000 --> 00:01:43,000
+Avec le filtre Éolien, les Hauts-de-France et le Grand Est passent devant.
+On regarde uniquement l'électricité produite par le vent.
 
 10
-00:01:57,000 --> 00:02:05,000
-Avec le filtre Éolien, les Hauts-de-France et le Grand Est ressortent.
-Les filtres modifient aussi les chiffres clés et la carte.
+00:01:43,000 --> 00:01:55,000
+Pour le solaire, la Nouvelle-Aquitaine et l'Occitanie arrivent en tête.
+Les régions n'ont donc pas toutes le même profil.
 
 11
-00:02:05,000 --> 00:02:15,000
-Avec le filtre Solaire, la Nouvelle-Aquitaine et l'Occitanie passent devant.
-Le détail des filières explique des profils régionaux différents.
+00:01:55,000 --> 00:02:07,000
+Le bouton English traduit aussi les graphiques et les explications.
+Les régions, les filtres et les chiffres restent les mêmes.
 
 12
-00:02:15,000 --> 00:02:28,000
-Aucune valeur manquante dans les variables utilisées, aucun doublon région-année.
-Les tableaux détaillés et le téléchargement permettent de vérifier les chiffres.
+00:02:07,000 --> 00:02:18,000
+L'éolien est en bleu, le solaire en orange.
+Ce graphique montre leur production année après année.
 
 13
-00:02:28,000 --> 00:02:40,000
-Pour aller plus loin : étudier les séries horaires, les capacités installées et la météo.
-Source : RTE / ODRE, Licence Ouverte 2.0. Roy TAMWO - 20230840 - I2-DE_02.
+00:02:18,000 --> 00:02:27,000
+L'étude utilise 156 lignes : 13 régions sur 12 ans.
+Aucune valeur manquante utile, aucun doublon région-année.
+
+14
+00:02:27,000 --> 00:02:34,000
+Les tableaux donnent les valeurs exactes.
+On peut aussi télécharger les données filtrées en CSV.
+
+15
+00:02:34,000 --> 00:02:44,000
+Les données viennent de RTE, via ODRE et data.gouv.fr.
+Copie du 20 octobre 2026, sous Licence Ouverte 2.0.
+
+16
+00:02:44,000 --> 00:02:55,000
+L'éolien et le solaire ont progressé, avec des écarts entre régions.
+Pour comprendre pourquoi : la météo, les équipements et les données horaires.
