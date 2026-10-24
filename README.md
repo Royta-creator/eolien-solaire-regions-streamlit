@@ -9,7 +9,7 @@ Projet individuel Streamlit, EFREI, 2026
 - [Dépôt GitHub](https://github.com/Royta-creator/eolien-solaire-regions-streamlit)
 - [Rapport et storyboard](docs/Rapport_Roy_TAMWO.pdf)
 - [Présentation simple](docs/Presentation_Roy_TAMWO.pdf)
-- [Vidéo de démonstration — 2 min 40](demo/Demo_Roy_TAMWO.mp4)
+- [Vidéo de démonstration — 2 min 55, version du 24 octobre 2026](demo/Demo_Roy_TAMWO.mp4)
 - [Sous-titres de la vidéo](demo/Demo_Roy_TAMWO.srt)
 
 ## La question
@@ -138,10 +138,10 @@ Le script de préparation retrouve les mêmes données, même si les fins de lig
 
 L'application est publiée sur [Streamlit Community Cloud](https://roy-tamwo-eolien-solaire.streamlit.app/) depuis la branche `main` du [dépôt GitHub](https://github.com/Royta-creator/eolien-solaire-regions-streamlit). Le point d'entrée est `app.py`, avec Python 3.12. Aucun secret n'est nécessaire. `requirements.txt` utilise les mêmes versions qu'en local. PyArrow est fixé à 24.0.0, la version choisie par la plateforme lors du déploiement. Les étapes sont décrites dans la [procédure officielle Streamlit](https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app).
 
-Les graphiques et le recalcul des indicateurs ont été vérifiés sur l'application en ligne. Le rapport contient le storyboard. La vidéo dure 2 min 40 et montre les interactions avec des sous-titres. Tous les liens à joindre au rendu sont aussi dans `LIENS_REMISE.txt`.
+Les graphiques et le recalcul des indicateurs ont été vérifiés sur l'application en ligne. Le rapport contient le storyboard. La vidéo du 24 octobre 2026 dure 2 min 55. C'est un montage de captures réelles successives du tableau de bord, avec des sous-titres français et sans piste audio. Les vues montrent la barre latérale, le choix de langue et les résultats obtenus avec les filtres ; il ne s'agit pas d'une capture continue des manipulations. Tous les liens à joindre au rendu sont aussi dans `LIENS_REMISE.txt`.
 
 Nom de remise : **StApp26_20230840_TAMWO_DE2.zip**. Le suffixe DE2 correspond au groupe indiqué **I2-DE_02**.
 
 ## Mise à jour du 24 octobre 2026
 
-La barre latérale a été réorganisée et l'application est maintenant disponible en français et en anglais. Le [logo officiel EFREI](https://www.efrei.fr/wp-content/uploads/2025/09/Logo-Efrei-CMJN-1024x512.png) a été téléchargé le 24 octobre 2026 pour identifier l'école. Le rapport, la présentation et la vidéo du premier rendu sont conservés. La vidéo montre donc encore l'ancienne barre latérale.
+La barre latérale a été réorganisée et l'application est maintenant disponible en français et en anglais. Le [logo officiel EFREI](https://www.efrei.fr/wp-content/uploads/2025/09/Logo-Efrei-CMJN-1024x512.png) a été téléchargé le 24 octobre 2026 pour identifier l'école. La vidéo et ses sous-titres ont été mis à jour pour présenter cette version. Le rapport et la présentation PDF du premier rendu sont conservés.

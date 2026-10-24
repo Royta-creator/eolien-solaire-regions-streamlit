@@ -16,7 +16,9 @@ https://github.com/Royta-creator/eolien-solaire-regions-streamlit/blob/main/docs
 Présentation simple :
 https://github.com/Royta-creator/eolien-solaire-regions-streamlit/blob/main/docs/Presentation_Roy_TAMWO.pdf
 
-Vidéo de démonstration — 2 min 40, sous-titrée, sans piste audio :
+Vidéo de démonstration — 2 min 55, version du 24 octobre 2026 :
+Montage de captures réelles successives, sous-titres français, sans piste audio.
+La barre latérale, le choix français/anglais et les résultats des filtres sont visibles.
 https://github.com/Royta-creator/eolien-solaire-regions-streamlit/blob/main/demo/Demo_Roy_TAMWO.mp4
 
 Nom du fichier à déposer : StApp26_20230840_TAMWO_DE2.zip
