@@ -1,0 +1,10 @@
+"""Informations affichées dans la barre latérale."""
+
+STUDENT_NAME = "Roy TAMWO"
+STUDENT_EMAIL = "roy.tamwo-tatchum@efrei.net"
+PROGRAMME = "DE · I2-DE_02"
+ACADEMIC_YEAR = "2026–2027"
+COURSE_NAME = "Data Analysis & Visualization"
+MODULE_CODE = "ST2DVZ-2627PSA01"
+TEACHER_NAME = "Mano Joseph Mathew"
+TEACHER_LINKEDIN = "https://fr.linkedin.com/in/manomathew"
