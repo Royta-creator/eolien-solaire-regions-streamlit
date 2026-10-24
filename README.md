@@ -46,7 +46,11 @@ Ouvrir l'adresse locale affichée par Streamlit, généralement `http://localhos
 
 ## Utiliser le tableau de bord
 
-1. Choisir les régions, la période et la filière dans le menu de gauche.
+Le haut de la barre latérale affiche Roy TAMWO, son adresse étudiante, le programme DE et l'année 2026–2027. Le bloc du bas présente le cours **Data Analysis & Visualization** (ST2DVZ-2627PSA01), Mano Joseph Mathew, son LinkedIn et le logo EFREI.
+
+Le sélecteur **Français / English** traduit l'interface, les explications, les indicateurs et les graphiques. Les filtres sont conservés lors d'un changement de langue. Les noms officiels des régions et des jeux de données restent en français ; les en-têtes du CSV brut exporté restent stables pour permettre sa réutilisation.
+
+1. Ouvrir **Explorer les données / Explore the data**, puis choisir les régions, la période et la filière.
 2. Lire les chiffres de la dernière année de la période et la courbe d'évolution.
 3. Comparer le classement et la carte. Passer du rapport en pourcentage aux volumes en TWh pour comprendre la différence.
 4. Regarder les volumes par filière, puis la méthode et les limites. Les tableaux détaillés et le CSV filtré se trouvent en bas de page.
@@ -107,6 +111,8 @@ Les données en ligne peuvent être révisées. Le manifeste `sources.json` déc
 app.py                      application Streamlit
 utils/data.py               chargement en cache et agrégations
 utils/charts.py             graphiques Plotly
+utils/profile.py            identité, cours et informations de la barre latérale
+assets/efrei-logo.png        logo officiel EFREI, disponible hors ligne
 data/                       CSV bruts, panel, carte, métadonnées et contrôles
 scripts/                    téléchargement et préparation reproductible
 tests/test_project.py       vérifications données, calculs, filtres et carte
@@ -122,7 +128,7 @@ requirements*.txt           versions des dépendances
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ```
 
-Les 11 tests passent dans un environnement Python 3.12.14 neuf sur Windows x64. Ils comparent notamment les chiffres préparés aux sources brutes, contrôlent le calcul sur plusieurs régions et exercent les filtres de l'application via AppTest. La préparation reconstruit les fichiers analytiques à l'octet près. `pip check` ne signale aucun conflit. Les quatre graphiques ont aussi été ouverts dans un navigateur pour vérifier leur affichage. Les commandes Linux/macOS sont fournies, mais n'ont pas été exécutées dans cet environnement.
+Les 13 tests passent avec Python 3.12 sur Windows x64. Ils comparent les chiffres préparés aux sources brutes, contrôlent les calculs et exercent les filtres via AppTest. Ils vérifient aussi le changement de langue dans les deux sens, les graphiques traduits et la conservation des sélections et des chiffres. La préparation reconstruit le même contenu analytique, indépendamment des fins de ligne Windows/Linux. Les quatre graphiques ont aussi été ouverts dans un navigateur. Les commandes Linux/macOS sont fournies, mais n'ont pas été exécutées dans cet environnement.
 
 ## Mise en ligne et dépôt
 
@@ -131,3 +137,7 @@ L'application est publiée sur [Streamlit Community Cloud](https://roy-tamwo-eol
 Les graphiques et le recalcul des indicateurs ont été vérifiés sur l'application publiée. Le rapport contient le storyboard ; la vidéo dure 2 min 40 et présente les interactions avec des sous-titres. Les liens complets à joindre à la remise se trouvent aussi dans `LIENS_REMISE.txt`.
 
 Nom de remise : **StApp26_20230840_TAMWO_DE2.zip**. Le suffixe DE2 correspond au groupe indiqué **I2-DE_02**.
+
+## Mise à jour du 24 octobre 2026
+
+Barre latérale réorganisée et interface bilingue français/anglais. Le logo est une copie du [logo diffusé sur le site officiel EFREI](https://www.efrei.fr/wp-content/uploads/2025/09/Logo-Efrei-CMJN-1024x512.png), téléchargée le 24 octobre 2026 et utilisée pour identifier l'établissement. Le rapport, la présentation et la vidéo du rendu initial sont conservés ; la vidéo montre l'ancienne disposition de la barre latérale.
